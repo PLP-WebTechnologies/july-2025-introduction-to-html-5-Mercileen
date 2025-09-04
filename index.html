@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Basic SEO -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Semantic HTML5 Guide</title>
+  <meta name="description" content="Learn how to build web pages with semantic HTML5 elements, accessibility enhancements, and SEO-friendly structure." />
+  <meta name="keywords" content="HTML5, semantic HTML, accessibility, SEO, headings, landmarks" />
+  <meta name="author" content="Jane Doe" />
+
+  <!-- Open Graph (social sharing) -->
+  <meta property="og:title" content="Semantic HTML5 Guide — Accessibility & SEO" />
+  <meta property="og:description" content="A practical guide to writing semantic HTML5 with accessibility and SEO in mind." />
+  <meta property="og:image" content="semantic-html-guide.png" />
+  <meta property="og:type" content="article" />
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Semantic HTML5 Guide — Accessibility & SEO" />
+  <meta name="twitter:description" content="A practical guide to writing semantic HTML5 with accessibility and SEO in mind." />
+  <meta name="twitter:image" content="semantic-html-guide.png" />
+
+  <style>
+    body { font-family: system-ui, Arial, sans-serif; line-height: 1.6; margin: 0; }
+    header, main, aside, footer { padding: 1rem; }
+    nav ul { list-style: none; padding: 0; display: flex; gap: 1rem; }
+    nav a { text-decoration: none; }
+    .skip-link { position: absolute; left:-999px; top:auto; width:1px; height:1px; overflow:hidden; }
+    .skip-link:focus { left: 1rem; top: 1rem; width: auto; height: auto; background: #fff; padding: .5rem; border: 1px solid #333; }
+    img { max-width: 100%; height: auto; }
+  </style>
+</head>
+<body>
+  <!-- Skip to content for keyboard users -->
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- Header landmark -->
+  <header role=>
+    <h1>Semantic HTML5 Guide</h1>
+    <p class="tagline">Accessibility and SEO Best Practices</p>
+
+    <nav aria-label="Primary navigation">
+      <ul>
+        <li><a href="/" aria-current="page">Home</a></li>
+        <li><a href="/guides">Guides</a></li>
+        <li><a href="/tutorials">Tutorials</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main id="main">
+    <article aria-labelledby="intro-heading">
+      <header>
+        <h2 id="intro-heading">Why Semantic HTML Matters</h2>
+        <p>
+          <time datetime="2025-09-04">Updated September 4, 2025</time> · 
+          <span>By</span>
+        </p>
+      </header>
+
+      <p>
+        Semantic HTML5 provides structure and meaning to web pages, improving accessibility for screen readers and helping search engines better understand your content.
+      </p>
+
+      <figure>
+        <img src="semantic-layout.png" alt="Diagram showing a page layout with header, nav, main, aside, and footer landmarks." />
+        <figcaption>Semantic elements help define clear content regions.</figcaption>
+      </figure>
+    </article>
+
+    <section aria-labelledby="accessibility-heading">
+      <h2 id="accessibility-heading">Accessibility Enhancements</h2>
+      <p>These features improve usability for people with disabilities:</p>
+      <ul>
+        <li>Landmark roles (<code>header</code>, <code>main</code>, <code>aside</code>, <code>footer</code>) for screen readers.</li>
+        <li>Skip links to bypass navigation.</li>
+        <li>Descriptive <code>alt</code> attributes for images.</li>
+        <li>Proper heading hierarchy (<code>h1</code> → <code>h2</code> → <code>h3</code>).</li>
+        <li><code>aria-label</code> for multiple nav sections.</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="seo-heading">
+      <h2 id="seo-heading">SEO-Friendly Content</h2>
+      <p>To boost discoverability, follow these practices:</p>
+      <ol>
+        <li>Use descriptive, keyword-rich page titles and meta descriptions.</li>
+        <li>Ensure headings summarize their sections.</li>
+        <li>Include structured data and Open Graph tags for social sharing.</li>
+        <li>Keep URLs short and descriptive.</li>
+        <li>Write content for humans first, search engines second.</li>
+      </ol>
+    </section>
+
+    <aside aria-labelledby="related-links">
+      <h2 id="related-links">Related Resources</h2>
+      <ul>
+        <li><a href="/html5-semantics">HTML5 Semantics Explained</a></li>
+        <li><a href="/web-accessibility">Accessibility Checklist</a></li>
+        <li><a href="/seo-basics">SEO Basics for Developers</a></li>
+      </ul>
+    </aside>
+  </main>
+
+  <footer role="contentinfo">
+    <nav aria-label="Footer navigation">
+      <ul>
+        <li><a href="/privacy-policy">Privacy</a></li>
+        <li><a href="/terms">Terms</a></li>
+      </ul>
+    </nav>
+    <address>
+      Contact: <a href="mailto:hello@example.com">hello@example.com</a>
+    </address>
+    <p>&copy; <time datetime="2025">2025</time> Semantic HTML5 Guide</p>
+  </footer>
+</body>
+</html>
